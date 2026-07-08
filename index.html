@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Balloutt Trades LLC — Enter the Portal</title>
-<meta name="description" content="Balloutt Trades LLC — trading education, tools, and community. Free and paid mentorship, the TraderDaddy AIMBOT, the TD indicator, and Discord.">
+<meta name="description" content="Balloutt Trades LLC — Top 0.1% trader results. Live options alerts, 1:1 mentorship, and a free community. Every entry, every exit, tracked in %.">
 
 <meta property="og:title" content="Balloutt Trades LLC">
-<meta property="og:description" content="Your all-in-one resource for trading education — tools, signals, and mentorship.">
+<meta property="og:description" content="Top 0.1% trader results. Every entry, every exit, tracked in %. Free and paid material, live alerts, and 1:1 mentorship.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/profile.jpg">
 <meta name="theme-color" content="#0d0131">
@@ -102,6 +102,7 @@
     box-shadow:0 0 8px var(--ember);animation:pulse 2s ease-in-out infinite}
   @keyframes pulse{50%{opacity:.35}}
   .bio{max-width:404px;color:var(--ink-dim);font-size:15.5px;line-height:1.6;opacity:0;animation:rise .7s .38s ease forwards}
+  .bio strong{color:var(--violet-bright);font-weight:700}
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
   .stats{display:flex;justify-content:center;gap:10px;margin-top:22px;flex-wrap:wrap;
@@ -110,6 +111,7 @@
     background:var(--card);border:1px solid var(--card-line);backdrop-filter:blur(8px);
     text-decoration:none;transition:transform .25s cubic-bezier(.2,.8,.2,1),border-color .25s,background .25s}
   .stats__item:hover{transform:translateY(-2px);border-color:rgba(168,85,247,.6);background:rgba(168,85,247,.1)}
+  .stats__item--static{cursor:default}
   .stats__item svg{width:15px;height:15px;color:var(--violet-bright);flex:none}
   .stats__num{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:13px;color:var(--ink)}
   .stats__label{font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.04em}
@@ -211,6 +213,144 @@
     *{animation:none!important;transition:none!important}
     .link,.name,.llc,.handle,.bio,.rule,.socials,.disc,.foot,.avatar,.qr{opacity:1!important;transform:none!important}
   }
+
+  /* ---------- How It Works ---------- */
+  .steps{display:flex;flex-direction:column;gap:10px;opacity:0;animation:rise .7s .46s ease forwards}
+  .step{display:flex;align-items:center;gap:15px;padding:14px 17px;border-radius:var(--radius);
+    background:var(--card);border:1px solid var(--card-line);text-decoration:none;color:var(--ink);
+    transition:transform .25s cubic-bezier(.2,.8,.2,1),border-color .25s,background .25s}
+  .step:hover{transform:translateY(-2px);border-color:rgba(168,85,247,.6);background:rgba(168,85,247,.09)}
+  .step__num{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:15px;
+    color:var(--violet-bright);flex:none;width:24px}
+  .step__body{display:flex;flex-direction:column;min-width:0}
+  .step__title{font-weight:600;font-size:14.5px}
+  .step__sub{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-faint);margin-top:2px}
+
+  /* ---------- Recent Highlights ---------- */
+  .highlights{display:flex;gap:12px;overflow-x:auto;padding:2px 2px 6px;margin:0 -2px;
+    scrollbar-width:none;opacity:0;animation:rise .7s .48s ease forwards}
+  .highlights::-webkit-scrollbar{display:none}
+  .hl-card{flex:none;min-width:184px;padding:16px 18px;border-radius:var(--radius);
+    background:linear-gradient(150deg,rgba(60,232,138,.10),var(--card));
+    border:1px solid rgba(60,232,138,.28);backdrop-filter:blur(8px)}
+  .hl-pct{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:22px;color:var(--up);
+    text-shadow:0 0 18px rgba(60,232,138,.4)}
+  .hl-label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin-top:6px}
+  .hl-period{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ink-dim);margin-top:8px;line-height:1.5}
+  .hl-card.hl-wide{min-width:212px}
+  .hl-list{margin-top:9px;display:flex;flex-direction:column;gap:3px;
+    font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--ink-dim)}
+  .hl-disclaimer{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--ink-faint);
+    font-style:italic;margin-top:8px;padding:0 2px}
+  .hl-disclaimer-link{color:var(--ink-dim);text-decoration:underline;text-underline-offset:2px}
+
+  /* ---------- Pricing ---------- */
+  .pricing{display:flex;flex-direction:column;gap:14px;opacity:0;animation:rise .7s .54s ease forwards}
+  .price-card{border-radius:var(--radius);border:1px solid var(--card-line);background:var(--card);
+    padding:22px 20px;backdrop-filter:blur(8px);position:relative;overflow:hidden}
+  .price-card.feat{border-color:rgba(168,85,247,.4);
+    background:linear-gradient(115deg,rgba(168,85,247,.14),rgba(255,59,78,.06))}
+  .price-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:4px}
+  .price-name{font-family:"Fraunces",serif;font-weight:600;font-size:19px;letter-spacing:-.01em}
+  .price-amt{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:22px;color:var(--violet-bright)}
+  .price-amt small{font-size:12px;color:var(--ink-faint);font-weight:500}
+  .price-desc{color:var(--ink-dim);font-size:13.5px;line-height:1.6;margin:10px 0 14px}
+  .price-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+  .price-list li{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--ink-dim);line-height:1.4}
+  .price-list li::before{content:"✓";color:var(--up);font-weight:700;flex-shrink:0}
+  .price-plans{list-style:none;display:flex;flex-direction:column;gap:6px;margin-bottom:14px;
+    font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--ink-dim);padding:12px 14px;
+    border-radius:12px;background:rgba(0,0,0,.18);border:1px solid var(--card-line)}
+  .price-plans li{display:flex;justify-content:space-between;gap:10px}
+  .price-plans .note{margin-top:2px;color:var(--ink-faint);font-size:11px;font-style:italic}
+  .price-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;
+    padding:13px 18px;border-radius:999px;background:linear-gradient(135deg,var(--violet),var(--plasma));
+    color:#fff;text-decoration:none;font-weight:700;font-size:14px;transition:filter .2s ease}
+  .price-cta:hover{filter:brightness(1.1)}
+
+  .pricing-toggle{margin:38px 0 18px}
+  .pricing-summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px}
+  .pricing-summary::-webkit-details-marker{display:none}
+  .pricing-summary-line{height:1px;flex:1;background:linear-gradient(90deg,transparent,var(--card-line),transparent)}
+  .pricing-summary-text{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--ink-faint);white-space:nowrap}
+  .pricing-toggle[open] .pricing-summary-text{color:var(--violet-bright)}
+  .pricing-toggle[open] .faq-chevron{transform:rotate(45deg);background:var(--violet);color:#160030;border-color:var(--violet)}
+  .pricing-toggle .pricing{margin-top:18px}
+
+  /* ---------- Sticky Join Free bar ---------- */
+  .join-bar{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:center;
+    gap:8px;padding:11px 16px;text-align:center;text-decoration:none;
+    font-family:"JetBrains Mono",monospace;font-size:12.5px;font-weight:700;letter-spacing:.02em;
+    color:#fff;background:linear-gradient(90deg,var(--plasma),var(--violet),var(--plasma));
+    background-size:200% 100%;animation:barflow 6s linear infinite;
+    border-bottom:1px solid rgba(255,255,255,.12);transition:filter .2s ease}
+  @keyframes barflow{to{background-position:200% 0}}
+  .join-bar:hover{filter:brightness(1.08)}
+  .join-bar .arrow{transition:transform .25s ease}
+  .join-bar:hover .arrow{transform:translateX(3px)}
+
+  /* ---------- FAQ ---------- */
+  .faq{display:flex;flex-direction:column;gap:11px}
+  .faq-item{background:var(--card);border:1px solid var(--card-line);border-radius:var(--radius);
+    overflow:hidden;backdrop-filter:blur(8px);transition:border-color .25s ease}
+  .faq-item[open]{border-color:rgba(168,85,247,.6)}
+  .faq-item summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;
+    justify-content:space-between;gap:14px;font-weight:600;font-size:15px}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-tag{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--ember);flex-shrink:0;width:26px}
+  .faq-q{flex:1}
+  .faq-chevron{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:1px solid rgba(168,85,247,.4);
+    display:flex;align-items:center;justify-content:center;color:var(--violet-bright);font-size:14px;
+    transition:transform .25s ease,background .25s ease}
+  .faq-item[open] .faq-chevron{transform:rotate(45deg);background:var(--violet);color:#160030;border-color:var(--violet)}
+  .faq-a{padding:0 18px 18px 60px;color:var(--ink-dim);font-size:14px;line-height:1.6;margin:0}
+  .faq-more{display:flex;flex-direction:column;gap:11px;max-height:0;opacity:0;overflow:hidden;
+    transition:max-height .5s ease,opacity .4s ease,margin-top .4s ease}
+  .faq:has(> details.faq-item.main[open]) .faq-more{max-height:900px;opacity:1;margin-top:2px}
+  .faq-more-label{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--ink-faint);margin:2px 2px 2px}
+
+  /* ---------- Ask Us button + modal ---------- */
+  .ask-us-wrap{position:fixed;right:18px;bottom:20px;z-index:50;display:flex;flex-direction:column;
+    align-items:flex-end;gap:8px}
+  .ask-us-badge{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.04em;
+    color:var(--ink-dim);background:rgba(5,1,16,.85);border:1px solid var(--card-line);
+    padding:5px 11px;border-radius:999px;backdrop-filter:blur(6px);white-space:nowrap}
+  .ask-us-btn{display:flex;align-items:center;gap:9px;
+    padding:13px 20px;border-radius:999px;border:1px solid rgba(255,255,255,.15);
+    background:linear-gradient(135deg,var(--violet) 0%,var(--plasma) 100%);color:#fff;
+    font-family:"JetBrains Mono",monospace;font-weight:700;font-size:12.5px;letter-spacing:.05em;
+    text-transform:uppercase;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.4);
+    animation:pulse-glow 2.6s ease-in-out infinite}
+  .ask-us-btn:hover{filter:brightness(1.12)}
+  @keyframes pulse-glow{
+    0%{box-shadow:0 0 0 0 rgba(168,85,247,.55),0 8px 24px rgba(0,0,0,.4)}
+    70%{box-shadow:0 0 0 14px rgba(168,85,247,0),0 8px 24px rgba(0,0,0,.4)}
+    100%{box-shadow:0 0 0 0 rgba(168,85,247,0),0 8px 24px rgba(0,0,0,.4)}
+  }
+  .modal-overlay{position:fixed;inset:0;background:rgba(5,1,16,.78);backdrop-filter:blur(3px);
+    z-index:100;display:none;align-items:flex-end;justify-content:center}
+  .modal-overlay.open{display:flex}
+  @media (min-width:560px){.modal-overlay{align-items:center}}
+  .modal{width:100%;max-width:400px;background:var(--indigo);border:1px solid var(--card-line);
+    border-radius:20px 20px 0 0;padding:26px 22px 30px;position:relative;
+    box-shadow:0 -10px 40px rgba(168,85,247,.18)}
+  @media (min-width:560px){.modal{border-radius:20px}}
+  .modal-close{position:absolute;top:14px;right:14px;width:30px;height:30px;border-radius:50%;
+    border:1px solid rgba(168,85,247,.4);background:transparent;color:var(--ink-faint);cursor:pointer;font-size:16px}
+  .modal h3{font-family:"Fraunces",serif;font-weight:600;font-size:24px;margin-bottom:4px}
+  .modal p.sub{color:var(--ink-dim);font-size:13px;margin-bottom:20px}
+  .contact-option{display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:12px;
+    border:1px solid var(--card-line);background:rgba(168,85,247,.06);color:var(--ink);
+    text-decoration:none;margin-bottom:9px;font-size:14px;font-weight:500;
+    transition:border-color .2s ease,transform .15s ease}
+  .contact-option:hover{border-color:var(--violet);transform:translateX(2px)}
+  .contact-icon{width:32px;height:32px;border-radius:50%;background:rgba(168,85,247,.14);
+    display:flex;align-items:center;justify-content:center;color:var(--violet-bright);flex-shrink:0}
+  .contact-icon svg{width:16px;height:16px}
+  .contact-meta{display:flex;flex-direction:column}
+  .contact-meta .contact-handle{color:var(--ink-faint);font-size:11px;font-family:"JetBrains Mono",monospace}
 </style>
 </head>
 <body>
@@ -221,6 +361,10 @@
 <svg class="grain"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
 
 <div class="tape"><div class="tape__track" id="tape"></div></div>
+
+<a class="join-bar" href="https://discord.gg/y8WGBS8tHP" target="_blank" rel="noopener">
+  🔥 Join the Free Server — no cost to start <span class="arrow">→</span>
+</a>
 
 <main class="wrap">
 
@@ -233,8 +377,11 @@
     <h1 class="name">Balloutt <em>Trades</em></h1>
     <span class="llc">— Balloutt Trades LLC —</span>
     <div class="handle"><span class="dot"></span>@BallouttTradesLLC</div>
-    <p class="bio">Your all-in-one resource for trading education. Free and paid
-      material to help you learn effectively, plus a community for guidance and support.</p>
+    <p class="bio">When your gains read like a phone number, you stop explaining
+      yourself — you just show the tape.<br><br>
+      <strong>Top 0.1%</strong> trader results. Every entry, every exit, tracked in %.<br>
+      This isn't luck. This is execution.<br><br>
+      Free and paid material. I'm your connection for guidance. Receipts to back it all up.</p>
   </header>
 
   <div class="stats">
@@ -248,7 +395,65 @@
       <span class="stats__num">1K</span>
       <span class="stats__label">TikTok</span>
     </a>
+    <span class="stats__item stats__item--static">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span class="stats__num">32K</span>
+      <span class="stats__label">Total Reach</span>
+    </span>
   </div>
+
+  <div class="rule"><span>How It Works</span></div>
+  <div class="steps">
+    <a class="step" href="https://discord.gg/y8WGBS8tHP" target="_blank" rel="noopener">
+      <span class="step__num">01</span>
+      <span class="step__body">
+        <span class="step__title">Join Free</span>
+        <span class="step__sub">Free Server · no cost to start</span>
+      </span>
+    </a>
+    <a class="step" href="https://discord.com/users/823730914655338538" target="_blank" rel="noopener">
+      <span class="step__num">02</span>
+      <span class="step__body">
+        <span class="step__title">Try Alerts</span>
+        <span class="step__sub">Double Trouble Bundle · $450/mo</span>
+      </span>
+    </a>
+    <a class="step" href="https://discord.com/users/823730914655338538" target="_blank" rel="noopener">
+      <span class="step__num">03</span>
+      <span class="step__body">
+        <span class="step__title">Buy Mentorship</span>
+        <span class="step__sub">Lifetime access · 1:1 guidance</span>
+      </span>
+    </a>
+  </div>
+
+  <div class="rule"><span>Recent Highlights</span></div>
+  <!-- Add / edit cards here — each one is a portfolio challenge result -->
+  <div class="highlights">
+    <div class="hl-card">
+      <div class="hl-pct">+219,829.85%</div>
+      <div class="hl-label">Portfolio Challenge</div>
+      <div class="hl-period">11:00 AM · Jun 29<br>— 1:00 PM · Jul 7</div>
+    </div>
+
+    <div class="hl-card">
+      <div class="hl-pct">+11,172.78%</div>
+      <div class="hl-label">June 2026 Recap</div>
+      <div class="hl-period">Total reported gain<br>day-by-day in Discord</div>
+    </div>
+
+    <div class="hl-card hl-wide">
+      <div class="hl-pct">+12,240%</div>
+      <div class="hl-label">Meta Runners · Jul 1</div>
+      <div class="hl-list">
+        <span>$575C 7/2 — +1,144%</span>
+        <span>$575C 7/1 — +1,633%</span>
+        <span>$575C 7/2 — +4,011%</span>
+        <span>$575C 7/1 — +12,240% 🔥</span>
+      </div>
+    </div>
+  </div>
+  <p class="hl-disclaimer">Individual results vary — see <a href="#riskDisclosure" class="hl-disclaimer-link">Risk Disclosure</a> below.</p>
 
   <div class="rule"><span>Tools &amp; Signals</span></div>
   <div class="links">
@@ -298,6 +503,47 @@
     <div>🔴 <span><b>SL hit</b> — stop-loss has been hit, trade closed.</span></div>
   </div>
 
+  <div class="rule"><span>Got Questions?</span></div>
+  <!-- Edit the answers below — keep questions short, one job per answer -->
+  <div class="faq">
+    <details class="faq-item main" id="faqMain">
+      <summary>
+        <span class="faq-tag">01</span>
+        <span class="faq-q">What do I get with the paid material?</span>
+        <span class="faq-chevron">+</span>
+      </summary>
+      <p class="faq-a">1:1 mentorship, live trading sessions, my personal trades, my full watchlist, and more — everything you need, all in one place.</p>
+    </details>
+
+    <div class="faq-more">
+      <p class="faq-more-label">Most Asked</p>
+      <details class="faq-item">
+        <summary>
+          <span class="faq-tag">02</span>
+          <span class="faq-q">Is there a free version?</span>
+          <span class="faq-chevron">+</span>
+        </summary>
+        <p class="faq-a">Of course — join the Free Server down in the Community section to get started at no cost.</p>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="faq-tag">03</span>
+          <span class="faq-q">How do I get access after purchasing?</span>
+          <span class="faq-chevron">+</span>
+        </summary>
+        <p class="faq-a">Depends what you bought, but access is usually automatic. If it's not, message us — we typically reply within the hour.</p>
+      </details>
+      <details class="faq-item">
+        <summary>
+          <span class="faq-tag">04</span>
+          <span class="faq-q">Do you offer refunds?</span>
+          <span class="faq-chevron">+</span>
+        </summary>
+        <p class="faq-a">Of course. If you're unsatisfied with the mentorship, just speak up — it's your money at the end of the day.</p>
+      </details>
+    </div>
+  </div>
+
   <div class="rule"><span>Community · Discord</span></div>
   <div class="links">
 
@@ -323,7 +569,7 @@
       <span class="link__cta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
 
-    <a class="link" href="https://discord.gg/y8WGBS8tHP" target="_blank" rel="noopener">
+    <a class="link feat" href="https://discord.gg/y8WGBS8tHP" target="_blank" rel="noopener">
       <span class="link__icon">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19 19 0 0 0 15.6 3l-.2.5a13 13 0 0 1 3.7 1.9 15.6 15.6 0 0 0-14.2 0A13 13 0 0 1 8.6 3.5L8.4 3a19 19 0 0 0-4.7 1.4C1.3 8 .6 11.5.9 15a19 19 0 0 0 5.7 2.9l.6-1a12 12 0 0 1-1.9-.9l.5-.4a13.6 13.6 0 0 0 11.6 0l.4.4a12 12 0 0 1-1.9.9l.6 1a19 19 0 0 0 5.7-2.9c.4-4.2-.6-7.6-2.5-10.6ZM8.4 13c-.9 0-1.7-.9-1.7-1.9s.7-1.9 1.7-1.9 1.7.9 1.7 1.9-.7 1.9-1.7 1.9Zm7.2 0c-.9 0-1.7-.9-1.7-1.9s.7-1.9 1.7-1.9 1.7.9 1.7 1.9-.7 1.9-1.7 1.9Z"/></svg>
       </span>
@@ -334,6 +580,53 @@
       <span class="link__cta"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
   </div>
+
+  <details class="pricing-toggle" id="pricingToggle">
+    <summary class="pricing-summary">
+      <span class="pricing-summary-line"></span>
+      <span class="pricing-summary-text">Pricing</span>
+      <span class="faq-chevron">+</span>
+    </summary>
+
+    <!-- Edit amounts / copy any time — everything below is plain text -->
+    <div class="pricing">
+
+      <div class="price-card feat">
+        <div class="price-top">
+          <span class="price-name">Lifetime Mentorship</span>
+        </div>
+        <div class="price-amt">$2,500 <small>one-time</small></div>
+        <p class="price-desc">1:1 mentorship, live trading sessions, my personal trades, my full watchlist, and more — lifetime access, paid once.</p>
+        <ul class="price-plans">
+          <li><span>One-time payment</span><span>$2,500</span></li>
+          <li><span>3-month plan</span><span>$1,200/mo</span></li>
+          <li><span>8-month plan</span><span>$600/mo</span></li>
+          <li><span>16-month plan</span><span>$350/mo</span></li>
+          <li><span>30-month plan</span><span>$200/mo</span></li>
+          <li class="note">Cancel anytime after 4 months</li>
+        </ul>
+        <a class="price-cta" href="https://discord.com/users/823730914655338538" target="_blank" rel="noopener">Apply for Mentorship</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-top">
+          <span class="price-name">Double Trouble Bundle</span>
+        </div>
+        <div class="price-amt">$450 <small>/mo</small></div>
+        <p class="price-desc">I'm Balloutt, a full-time options trader working alongside another analyst — two sets of eyes on every trade, with real-time TP/SL recalculations that adapt instantly to market conditions.</p>
+        <ul class="price-list">
+          <li>0DTE</li>
+          <li>Swing trades</li>
+          <li>LEAPS</li>
+          <li>Whale alerts</li>
+          <li>Heatmap plays</li>
+        </ul>
+        <p class="price-desc" style="margin-top:-6px">With two analysts, you're getting more coverage, stronger execution, and two perspectives on every setup.</p>
+        <a class="price-cta" href="https://discord.com/users/823730914655338538" target="_blank" rel="noopener">Get Alerts Access</a>
+      </div>
+
+    </div>
+  </details>
 
   <!-- QR share card -->
   <div class="qr">
@@ -366,7 +659,7 @@
     </a>
   </nav>
 
-  <div class="disc">
+  <div class="disc" id="riskDisclosure">
     <b>Risk disclosure.</b> Content is for educational purposes only and is not financial advice.
     Trading involves substantial risk of loss. Some links are affiliate links — Balloutt Trades LLC may earn a commission at no extra cost to you.
   </div>
@@ -374,6 +667,42 @@
   <div class="foot">© <span id="yr">2026</span> Balloutt Trades LLC · forged with <span class="beat">▲</span> for the community</div>
 
 </main>
+
+<!-- Ask Us button -->
+<div class="ask-us-wrap">
+  <span class="ask-us-badge">⏱ Usually replies in &lt;1hr</span>
+  <button class="ask-us-btn" onclick="document.getElementById('askUsModal').classList.add('open')">
+    💬 Ask Us
+  </button>
+</div>
+
+<div class="modal-overlay" id="askUsModal">
+  <div class="modal">
+    <button class="modal-close" onclick="document.getElementById('askUsModal').classList.remove('open')">✕</button>
+    <h3>Ask Us Anything</h3>
+    <p class="sub">Pick where you want to reach us — we'll get back to you.</p>
+
+    <a class="contact-option" href="https://discord.com/users/823730914655338538" target="_blank" rel="noopener">
+      <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A19 19 0 0 0 15.6 3l-.2.5a13 13 0 0 1 3.7 1.9 15.6 15.6 0 0 0-14.2 0A13 13 0 0 1 8.6 3.5L8.4 3a19 19 0 0 0-4.7 1.4C1.3 8 .6 11.5.9 15a19 19 0 0 0 5.7 2.9l.6-1a12 12 0 0 1-1.9-.9l.5-.4a13.6 13.6 0 0 0 11.6 0l.4.4a12 12 0 0 1-1.9.9l.6 1a19 19 0 0 0 5.7-2.9c.4-4.2-.6-7.6-2.5-10.6ZM8.4 13c-.9 0-1.7-.9-1.7-1.9s.7-1.9 1.7-1.9 1.7.9 1.7 1.9-.7 1.9-1.7 1.9Zm7.2 0c-.9 0-1.7-.9-1.7-1.9s.7-1.9 1.7-1.9 1.7.9 1.7 1.9-.7 1.9-1.7 1.9Z"/></svg></span>
+      <span class="contact-meta">Discord <span class="contact-handle">@balloutt.trades.llc</span></span>
+    </a>
+
+    <a class="contact-option" href="https://www.instagram.com/BallouttTradesLLC/" target="_blank" rel="noopener">
+      <span class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+      <span class="contact-meta">Instagram <span class="contact-handle">@BallouttTradesLLC</span></span>
+    </a>
+
+    <a class="contact-option" href="https://www.snapchat.com/add/Balloutt.bb" target="_blank" rel="noopener">
+      <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.4c2.8 0 4.5 2.1 4.5 4.9 0 .8-.1 1.6-.1 2 .3.2.8.3 1.2.2.6-.2 1 .1 1.1.5.1.5-.3.8-1 1-.5.2-1.3.4-1.4.9-.1.4.5 1.2 1.3 2 .8.7 1.8 1.3 2.6 1.5.4.1.6.4.5.8-.2.7-1.7 1-2.5 1.1-.2 0-.3.2-.4.5-.1.4-.2.8-.6.8-.5.1-1.2-.3-2.2-.3-1.4 0-1.9 1.1-3.5 1.1s-2.1-1.1-3.5-1.1c-1 0-1.7.4-2.2.3-.4 0-.5-.4-.6-.8-.1-.3-.2-.5-.4-.5-.8-.1-2.3-.4-2.5-1.1-.1-.4.1-.7.5-.8.8-.2 1.8-.8 2.6-1.5.8-.8 1.4-1.6 1.3-2-.1-.5-.9-.7-1.4-.9-.7-.2-1.1-.5-1-1 .1-.4.5-.7 1.1-.5.4.1.9 0 1.2-.2 0-.4-.1-1.2-.1-2C7.5 4.5 9.2 2.4 12 2.4Z"/></svg></span>
+      <span class="contact-meta">Snapchat <span class="contact-handle">@Balloutt.bb</span></span>
+    </a>
+
+    <a class="contact-option" href="https://www.tiktok.com/@BallouttTrades" target="_blank" rel="noopener">
+      <span class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.2 1.6 3.7 3.7 3.9v2.6c-1.2.1-2.4-.2-3.6-.9v5.7c0 3.3-2.4 5.7-5.5 5.7-2.9 0-5.1-2.1-5.1-4.9 0-2.9 2.3-5 5.4-4.7v2.7c-.4-.1-.9-.2-1.3-.1-1.2.2-2 1-1.9 2.3.1 1.2 1 2 2.2 2 1.3 0 2.2-1 2.2-2.5V3h3.9Z"/></svg></span>
+      <span class="contact-meta">TikTok <span class="contact-handle">@BallouttTrades</span></span>
+    </a>
+  </div>
+</div>
 
 <script>
   (function(){
